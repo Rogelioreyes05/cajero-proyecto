@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="CAJERO.CSS" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Cajero Automático</h1>
+      </header>
+      <main>
+        <div id="login-section">
+          <h2>Ingresar al Cajero</h2>
+          <label for="account-select">Seleccionar cuenta:</label>
+          <select id="account-select">
+            <option value="0">Persona 1</option>
+            <option value="1">Persona 2</option>
+            <option value="2">Persona 3</option>
+          </select>
+          <br />
+          <label for="password-input">Contraseña:</label>
+          <input type="password" id="password-input" />
+          <br />
+          <button id="login-btn">Ingresar</button>
+          <p id="login-error"></p>
+        </div>
+        <div id="transaction-section" class="hidden">
+          <h2>Bienvenido(a), <span id="account-name"></span></h2>
+          <div id="balance-section">
+            <h3>Consultar saldo</h3>
+            <p id="balance-display"></p>
+          </div>
+          <div id="deposit-section">
+            <h3>Ingresar monto</h3>
+            <input type="number" id="deposit-input" min="10" max="990" />
+            <button id="deposit-btn">Ingresar</button>
+            <p id="deposit-result"></p>
+          </div>
+          <div id="withdraw-section">
+            <h3>Retirar monto</h3>
+            <input type="number" id="withdraw-input" min="10" max="990" />
+            <button id="withdraw-btn">Retirar</button>
+            <p id="withdraw-result"></p>
+          </div>
+          <button id="logout-btn">Salir</button>
+        </div>
+      </main>
+    </div>
+    <script src="CAJERO.JS"></script>
+  </body>
+</html>
